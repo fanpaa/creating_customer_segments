@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 检查你的Python版本</span>
@@ -11820,7 +11820,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 引入这个项目需要的库</span>
@@ -11876,7 +11876,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 显示数据集的一个描述</span>
@@ -12019,7 +12019,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：从数据集中选择三个你希望抽样的数据点的索引</span>
@@ -12137,9 +12137,9 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
-<p>0 蔬果产品的零售商。因为Fresh超出均值很多，其他类型都低于均值</p>
-<p>1 超市。各种类型超出均值很多，综合性的超市</p>
-<p>2 生鲜产品零售商。Frozen超出均值很多，说明主营冷冻产品，还有超出均值的Fresh，说明兼营蔬果</p>
+<p>0 蔬果产品的零售商。因为Fresh 43088超出均值12000接近4倍，超出中位数8504 5倍多，其他产品类型花费低于均值或与中位数差不多</p>
+<p>1 超市。各种产品类型花费均超出均值与中位数好几倍，综合性的超市</p>
+<p>2 生鲜产品零售商。Frozen 35009超出均值3071 10倍以上,中位数1526 20倍以上，说明主营冷冻产品</p>
 
 </div>
 </div>
@@ -12165,7 +12165,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -12229,7 +12229,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
-<p>尝试预测Fresh。得分-0.25.因为得分为负，故不能拟合数据，说明对于区分用户的消费习惯来说不必要</p>
+<p>尝试预测Fresh。得分-0.25.因为得分为负，故不能拟合数据，说明没法从其他特征中得到，代表了这个特征是必要的，对于区分用户的消费习惯来说也是必要的</p>
 
 </div>
 </div>
@@ -12245,7 +12245,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于数据中的每一对特征构造一个散布矩阵</span>
@@ -14063,7 +14063,7 @@ DMMwDMMwjCny/wF2eAYjCf/r7QAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
 <p>存在一些特征他们彼此之间存在一定程度相关性，如Grocery和Detergents_Paper，Grocery和Milk。</p>
-<p>没有验证了我尝试预测的Fresh特征的相关性，Fresh在图中表现成正态分布。而Grocery和Detergents_Paper表现成正比，类似一直线</p>
+<p>没有验证了我尝试预测的Fresh特征的相关性。这些特征数据呈 右偏分布（正偏态）</p>
 
 </div>
 </div>
@@ -14093,7 +14093,7 @@ DMMwDMMwjCny/wF2eAYjCf/r7QAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：使用自然对数缩放数据</span>
@@ -18200,7 +18200,7 @@ MBgMBsOmwDg/BoPBYDAYDAaDYVNgnB+DwWAwGAwGg8GwKfi/tBsM3KOlZsQAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过对数变换后的样本数据</span>
@@ -18307,7 +18307,7 @@ MBgMBsOmwDg/BoPBYDAYDAaDYVNgnB+DwWAwGAwGg8GwKfi/tBsM3KOlZsQAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于每一个特征，找到值异常高或者是异常低的数据点</span>
@@ -19125,7 +19125,9 @@ MBgMBsOmwDg/BoPBYDAYDAaDYVNgnB+DwWAwGAwGg8GwKfi/tBsM3KOlZsQAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
-<p>异常点如上轮代码运行结果：128, 65, 66, 75, 154。应该被移除。因为异常值会影响后续分析结果，去除会提高分析准确性</p>
+<p>异常点如上轮代码运行结果：128, 65, 66, 75, 154。应该被移除。
+例如75是Detergents_Paper的离群值，而在该特征上的值和另一个161是一样的，可能人为标错，应该移除。128也有这种情况。</p>
+<p>同时这几个异常点在多类特征下都是异常点，对于算法效果影响很大。</p>
 
 </div>
 </div>
@@ -19155,7 +19157,7 @@ MBgMBsOmwDg/BoPBYDAYDAaDYVNgnB+DwWAwGAwGg8GwKfi/tBsM3KOlZsQAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：通过在good_data上使用PCA，将其转换成和当前特征数一样多的维度</span>
@@ -19533,7 +19535,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过PCA转换的sample log-data</span>
@@ -19637,7 +19639,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：通过在good data上进行PCA，将其转换成两个维度</span>
@@ -19671,7 +19673,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过两个维度的PCA转换之后的样本log-data</span>
@@ -19754,7 +19756,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -19771,13 +19773,13 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x10f97ff90&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1164fec90&gt;</pre>
 </div>
 
 </div>
@@ -20882,7 +20884,7 @@ TkSuQmCC
 <p><strong>回答:</strong></p>
 <p>k-means 使用简单、时间复杂度、空间复杂度低</p>
 <p>高斯混合模型聚类算法（GMM）是概率式的聚类方法，对易混淆的区域能用概率进行描述，能得到更多的信息量</p>
-<p>选用GMM，相较与k-means，它在各类尺寸不同、聚类间有相关关系的的时候可能比k-means聚类更合适</p>
+<p>选用GMM，因为PCA降维后，前两个主成分相关性很难分辨，所以使用GMM从而得到所属类别的概率</p>
 
 </div>
 </div>
@@ -20909,7 +20911,7 @@ TkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="kn">import</span> <span class="n">GaussianMixture</span>
@@ -20982,7 +20984,7 @@ n_components = 6
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#选择n_components=2</span>
@@ -21030,7 +21032,7 @@ n_components = 6
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 从已有的实现中展示聚类的结果</span>
@@ -21694,7 +21696,7 @@ FEIAAAAAOs7/Bw9aUh9saeATAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：反向转换中心点</span>
@@ -21707,6 +21709,7 @@ FEIAAAAAOs7/Bw9aUh9saeATAAAAAElFTkSuQmCC
 <span class="n">segments</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Segment {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">centers</span><span class="p">))]</span>
 <span class="n">true_centers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">true_centers</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="n">true_centers</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">segments</span>
+<span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 <span class="n">display</span><span class="p">(</span><span class="n">true_centers</span><span class="p">)</span>
 </pre></div>
 
@@ -21717,6 +21720,119 @@ FEIAAAAAOs7/Bw9aUh9saeATAAAAAElFTkSuQmCC
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>440.000000</td>
+      <td>440.000000</td>
+      <td>440.000000</td>
+      <td>440.000000</td>
+      <td>440.000000</td>
+      <td>440.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>12000.297727</td>
+      <td>5796.265909</td>
+      <td>7951.277273</td>
+      <td>3071.931818</td>
+      <td>2881.493182</td>
+      <td>1524.870455</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>12647.328865</td>
+      <td>7380.377175</td>
+      <td>9503.162829</td>
+      <td>4854.673333</td>
+      <td>4767.854448</td>
+      <td>2820.105937</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>3.000000</td>
+      <td>55.000000</td>
+      <td>3.000000</td>
+      <td>25.000000</td>
+      <td>3.000000</td>
+      <td>3.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>3127.750000</td>
+      <td>1533.000000</td>
+      <td>2153.000000</td>
+      <td>742.250000</td>
+      <td>256.750000</td>
+      <td>408.250000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>8504.000000</td>
+      <td>3627.000000</td>
+      <td>4755.500000</td>
+      <td>1526.000000</td>
+      <td>816.500000</td>
+      <td>965.500000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>16933.750000</td>
+      <td>7190.250000</td>
+      <td>10655.750000</td>
+      <td>3554.250000</td>
+      <td>3922.000000</td>
+      <td>1820.250000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>112151.000000</td>
+      <td>73498.000000</td>
+      <td>92780.000000</td>
+      <td>60869.000000</td>
+      <td>40827.000000</td>
+      <td>47943.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
 
 <div class="output_area">
 
@@ -21796,10 +21912,10 @@ FEIAAAAAOs7/Bw9aUh9saeATAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
-<p>最开始的均值mean
-12000.297727    5796.265909 7951.277273 3071.931818 2881.493182 1524.870455</p>
-<p>Segment 0 各种都有点，且比起均值偏小，应该是小型零售店</p>
-<p>Segment 1 杂货，清洁用品大，应该是超市</p>
+<p>mean | 12000.297727 |   5796.265909 |   7951.277273 |   3071.931818 |   2881.493182 |   1524.870455</p>
+<p>50%  | 8504.000000 |    3627.000000 |   4755.500000  | 1526.000000 |    816.500000  | 965.500000</p>
+<p>Segment 0 所有特征都比mean小，且除了Fresh、Frozen，都比中位数小，应该是小型零售店</p>
+<p>Segment 1 特征 Milk、Grocery、Detergents_Paper比mean大，且Grocery大于中位35倍以上，Detergents_Paper大于中位数5倍以上，应该是超市或大型餐饮</p>
 
 </div>
 </div>
@@ -21816,7 +21932,7 @@ FEIAAAAAOs7/Bw9aUh9saeATAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 显示预测结果</span>
@@ -21904,7 +22020,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
@@ -21977,7 +22093,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 根据‘Channel‘数据显示聚类的结果</span>
